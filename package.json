@@ -1,0 +1,325 @@
+{
+  "name": "forgeai-omega-cultural-metaverse",
+  "version": "1.0.0",
+  "description": "Revolutionary AI Platform with Cultural Intelligence Metaverse - Experience any country's culture through advanced AI",
+  "keywords": [
+    "artificial-intelligence",
+    "cultural-intelligence",
+    "metaverse",
+    "research-ai",
+    "content-generation",
+    "tourism-intelligence",
+    "job-market-intelligence",
+    "security-mapping",
+    "business-intelligence",
+    "multi-country-ai",
+    "cultural-adaptation",
+    "nextjs",
+    "react",
+    "typescript",
+    "supabase",
+    "firebase"
+  ],
+  "author": {
+    "name": "Cerebrum IP Solutions Ltd",
+    "email": "development@intforge.com",
+    "url": "https://intforge.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intelliforge-platform/forgeai-omega.git"
+  },
+  "homepage": "https://intforge.com",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "db:generate": "supabase gen types typescript --project-id bdtpzytwnpaeasqvmrbr --schema public > src/types/supabase.ts",
+    "db:push": "supabase db push",
+    "db:reset": "supabase db reset",
+    "db:seed": "supabase db seed",
+    "cultural-metaverse:setup": "node scripts/setup-cultural-metaverse.js",
+    "cultural-metaverse:seed": "node scripts/seed-cultural-data.js",
+    "validate-env": "node scripts/validate-env.js",
+    "analyze": "ANALYZE=true npm run build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "@next/bundle-analyzer": "^14.0.4",
+    "@sentry/nextjs": "^7.85.0",
+    "@stripe/stripe-js": "^2.4.0",
+    "@supabase/auth-helpers-nextjs": "^0.8.7",
+    "@supabase/auth-helpers-react": "^0.4.2",
+    "@supabase/ssr": "^0.1.0",
+    "@supabase/supabase-js": "^2.38.5",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "@vercel/analytics": "^1.1.1",
+    "@vercel/speed-insights": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "date-fns": "^3.0.6",
+    "firebase": "^10.7.1",
+    "firebase-admin": "^12.0.0",
+    "framer-motion": "^10.16.16",
+    "lodash": "^4.17.21",
+    "lucide-react": "^0.303.0",
+    "next": "14.0.4",
+    "next-themes": "^0.2.1",
+    "openai": "^4.24.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.48.2",
+    "react-hot-toast": "^2.4.1",
+    "react-intersection-observer": "^9.5.3",
+    "react-query": "^3.39.3",
+    "recharts": "^2.8.0",
+    "resend": "^3.0.0",
+    "stripe": "^14.10.0",
+    "tailwind-merge": "^2.1.0",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.3",
+    "uuid": "^9.0.1",
+    "zod": "^3.22.4",
+    "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.6",
+    "@storybook/addon-interactions": "^7.6.6",
+    "@storybook/addon-links": "^7.6.6",
+    "@storybook/blocks": "^7.6.6",
+    "@storybook/nextjs": "^7.6.6",
+    "@storybook/react": "^7.6.6",
+    "@storybook/testing-library": "^0.2.2",
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/jest": "^29.5.8",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/uuid": "^9.0.7",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "autoprefixer": "^10.4.16",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.55.0",
+    "eslint-config-next": "14.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.9",
+    "storybook": "^7.6.6",
+    "supabase": "^1.120.0",
+    "tailwindcss": "^3.3.6"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.3%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "config": {
+    "cultural-metaverse": {
+      "supported-countries": 195,
+      "default-country": "Nigeria",
+      "default-country-code": "NG",
+      "ai-models": {
+        "cultural-intelligence": "gpt-4",
+        "research": "gpt-4",
+        "content": "gpt-4",
+        "security-analysis": "gpt-4"
+      },
+      "features": {
+        "tourism-intelligence": true,
+        "job-market-intelligence": true,
+        "security-mapping": true,
+        "business-intelligence": true,
+        "multi-country-switching": true,
+        "real-time-updates": true
+      }
+    }
+  },
+  "customCommands": {
+    "setup": {
+      "description": "Complete ForgeAI Omega Cultural Metaverse setup",
+      "steps": [
+        "npm install",
+        "npm run cultural-metaverse:setup",
+        "npm run db:generate",
+        "npm run db:push",
+        "npm run cultural-metaverse:seed",
+        "npm run validate-env"
+      ]
+    },
+    "deploy": {
+      "description": "Deploy ForgeAI Omega to production",
+      "steps": [
+        "npm run type-check",
+        "npm run lint",
+        "npm run test",
+        "npm run build",
+        "vercel --prod"
+      ]
+    }
+  },
+  "optionalDependencies": {
+    "@aws-sdk/client-s3": "^3.474.0",
+    "@google-cloud/storage": "^7.7.0",
+    "twilio": "^4.19.0"
+  },
+  "bundleDependencies": [],
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "apps/*"
+    ]
+  },
+  "volta": {
+    "node": "20.10.0",
+    "npm": "10.2.3"
+  },
+  "packageManager": "npm@10.2.3",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
+    },
+    "./cultural-metaverse": {
+      "import": "./src/lib/cultural-metaverse/index.ts",
+      "require": "./src/lib/cultural-metaverse/index.ts"
+    },
+    "./hooks": {
+      "import": "./src/hooks/index.ts",
+      "require": "./src/hooks/index.ts"
+    },
+    "./components": {
+      "import": "./src/components/index.ts",
+      "require": "./src/components/index.ts"
+    }
+  },
+  "imports": {
+    "#cultural-metaverse": "./src/lib/cultural-metaverse/index.ts",
+    "#hooks": "./src/hooks/index.ts",
+    "#components": "./src/components/index.ts",
+    "#types": "./src/types/index.ts",
+    "#utils": "./src/lib/utils/index.ts"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "moduleNameMapping": {
+      "^@/(.*)$": "<rootDir>/src/$1",
+      "^#cultural-metaverse$": "<rootDir>/src/lib/cultural-metaverse/index.ts",
+      "^#hooks$": "<rootDir>/src/hooks/index.ts",
+      "^#components$": "<rootDir>/src/components/index.ts"
+    },
+    "testMatch": [
+      "**/__tests__/**/*.(ts|tsx|js)",
+      "**/*.(test|spec).(ts|tsx|js)"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.(ts|tsx)",
+      "!src/**/*.d.ts",
+      "!src/**/*.stories.(ts|tsx)"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 70,
+        "lines": 70,
+        "statements": 70
+      }
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "next/core-web-vitals",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "react-hooks/exhaustive-deps": "warn"
+    },
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/intelliforge"
+  },
+  "contributors": [
+    {
+      "name": "ForgeAI Omega Development Team",
+      "email": "dev@intforge.com",
+      "url": "https://intforge.com/team"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/intelliforge-platform/forgeai-omega/issues",
+    "email": "support@intforge.com"
+  },
+  "security": {
+    "policy": "https://github.com/intelliforge-platform/forgeai-omega/security/policy",
+    "contact": "security@intforge.com"
+  },
+  "documentation": {
+    "main": "https://docs.intforge.com/forgeai-omega",
+    "api": "https://docs.intforge.com/api",
+    "cultural-metaverse": "https://docs.intforge.com/cultural-metaverse"
+  },
+  "changelog": "CHANGELOG.md",
+  "codeOfConduct": "CODE_OF_CONDUCT.md",
+  "contributing": "CONTRIBUTING.md"
+}
